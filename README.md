@@ -4,6 +4,7 @@ xerox slides pptx imprimir
 url professor fabio http://www.inf.ufg.br/~fabio/fe
 ---> https://docs.google.com/document/d/1ML_i92n_3RNTOfF8SlQzG-AofiTP8vSR2ye1iMvGCEk/edit
 entrega no github (11 nov 2018)
+ ° ABNT NBR 15985:2011 Imformática em Saúde - https://kyriosdata.github.io/id/
 
 Moodle UFG https://ead.inf.ufg.br/
 ---> fundamentos de computação movel e ubíqua com Professor Iwens Gervasio Sene Junior
