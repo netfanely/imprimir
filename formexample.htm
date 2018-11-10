@@ -1,0 +1,110 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>FORMULARIO</title>
+    <meta name="description" content="TRABALHO FRONT END">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+   <div class="container">
+	<form class="form-horizontal">
+          <div class="row">
+          <div class="form-group col-md-4">
+	     <input type="text" class="form-control" />
+	  </div>
+     <div class="form-group col-md-8">
+         <select class="form-control">
+              <option>teste</option>
+              <option>teste2</option>
+              <option>teste3</option>
+         </select>
+     </div>
+     </div>
+          <div class="row">
+          <div class="form-group col-md-4">
+	     <input type="text" class="form-control" />
+	  </div>
+     <div class="col-md-8">
+         <select class="form-control">
+              <option>teste</option>
+              <option>teste2</option>
+              <option>teste3</option>
+         </select>
+     </div>
+     </div>
+	</form>
+   </div>
+<div class="container">
+<form class="form-horizontal">
+  <div class="checkbox-inline">
+      <input type="checkbox" /> Valor
+  </div>
+  <div class="radiobox-inlne">
+      <input type="radio" /> Valor
+  </div>
+</form>
+</div>
+<form class="form-horizontal">
+	<input type="text" class="form-control">
+	<input type="text" class="form-control.input-sm">
+	<input type="text" class="form-control.input-lg">
+
+</form>
+
+<div class="container">
+<form class="form-horizontal">
+	<div class="has-sucess">
+		<label for="sucess" class="control-label">E-mail</label>
+		<input type="text" class="form-control" id="sucess">
+	</div>
+</form>
+
+<div class="jumbotron">
+	<div class="container">
+	 <div class="btn-group" data-toggle="buttons">
+      	   <label for="" class="btn btn-primary active">
+		<input type="radio" name="options" id="opt1" checked="true"> radio box 01
+           </label>
+      	   <label for="" class="btn btn-primary">
+		<input type="radio" name="options" id="opt2"> radio box 02
+           </label>
+
+	<button class="btn-lg btn-primary btn-loading" data-loading-text="Finalizando, aguarde ...">
+	Finalizar cadastro</button>
+
+
+	<div class="btn-group">
+	  <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">abrir dropdown</button>
+	  <ul class="dropdown-menu">
+		<li><a href="#">item</a></li>
+		<li><a href="#">item</a></li>
+		<li><a href="#">item</a></li>
+	  </ul>
+	</div>
+
+
+<img src="imagen.jpg" class="img-responsive img-circle center-block" alt="minha imagem" />
+
+
+
+	</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>
+	$(function(){
+	  $('.btn-loading').on('click',function(){
+            $btn = $(this).button('loading');
+	    setTimeout(function(){
+              $btn.button('reset');
+             },1000);
+	});
+});
+</script>
+</body>
+</html>

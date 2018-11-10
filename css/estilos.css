@@ -1,0 +1,59 @@
+#area{
+    position: relative;
+    left:33%;
+    top:29%;
+    width:386px;
+    height:270;
+    
+}
+#area #formulario{
+    /*position:absolute;*/
+    /*display:block;*/
+    /*background-color:#dcf0ef;*/
+    border-radius: 20px;
+    width:386px;
+    padding: 10px;
+    margin: auto;
+    height:380px;
+
+}
+fieldset{
+    margin: auto;
+    border: 3px solid green;
+    padding: 15px;
+    width:386px;
+    height:360px;
+    border-radius: 20px;
+}
+legend{
+    font-style:bold;
+    font-family:"Segoe UI","Arial","Times New Roman";
+    color:#243175;
+    font-size:24px;
+}
+#formulario label{
+    /*position:absolute;*/
+    left:19px;
+    margin-right:5px;
+    font-family: "Segoe UI","Arial, Helvetica", "sans-serif";
+}
+h1{
+    text-align:center;
+    font-family: "Arial", "Helvetica", "sans-serif";
+    line-height: normal;
+    color : rgb(33, 33, 122);
+    letter-spacing: -1px;
+    text-shadow: 2px 2px #9c9b9b;
+}
+h3{
+    text-align:center;
+    font-family: "Arial", "Helvetica", "sans-serif";
+    line-height: normal;
+    letter-spacing: -1px;
+    font-size: 15px;
+
+}
+#formulario input{
+    border: 2px solid rgb(66, 114, 95);
+    border-radius: 3px;
+}

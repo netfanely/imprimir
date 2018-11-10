@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+<title>Cadastro de Pacientes</title>
+    
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css'>
+    <style class="cp-pen-styles">#login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #F7F7F7;
+}
+#login .login-card {
+  background: #fff;
+  width: 24rem;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.11);
+}
+#login .login-card .card-title {
+  background-color: #00b89c;
+  padding: 2rem;
+}
+#login .login-card .card-title h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+#login .login-card .content {
+  padding: 3rem 2.5rem 5rem;
+}
+#login .login-card #email, #login .login-card #password {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 1.75rem;
+  padding: 0.25rem 0;
+  border: none;
+  border-bottom: 1px solid #dbdbdb;
+  transition: all .5s;
+}
+#login .login-card #email:hover, #login .login-card #password:hover {
+  border-color: #7a7a7a;
+
+}
+#login .login-card #email:active, #login .login-card #email:focus, #login .login-card #password:active, #login .login-card #password:focus {
+  border-color: #00d1b2;
+}
+#login .login-card .checkbox {
+  color: #b5b5b5;
+  font-size: 0.8rem;
+}
+#login .login-card .checkbox span {
+  margin-left: 0.5rem;
+}
+#login .login-card a {
+  font-size: 0.8rem;
+}
+#login .login-card .options {
+  color: #b5b5b5;
+  margin-bottom: 1.5rem;
+}
+#login .login-card button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #00d1b2;
+  border-radius: 4rem;
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 2px solid #00d1b2;
+  padding: 0.9rem 0 1.1rem;
+  transition: color .5s, border-color .5s;
+}
+#login .login-card button:hover, #login .login-card button:focus {
+  color: #009e86;
+  border-color: #009e86;
+}
+#login .login-card button:active {
+  transform: translateY(1px);
+}
+
+label {
+  cursor: pointer;
+}
+
+.regular-checkbox {
+  display: none;
+}
+
+.regular-checkbox + label {
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 7px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+.regular-checkbox:checked + label {
+  background-color: #e9ecee;
+}
+
+.regular-checkbox:checked + label:after {
+  content: '\2714';
+  font-size: 11px;
+  position: absolute;
+  top: 0;
+  left: 3px;
+  color: #b5b5b5;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+</style>    
+<script type="text/javascript">
+    var urls = new Array("nomes.html");
+    function nextpage(){
+        window.location = urls[Math.floor(urls.length*Math.random())];
+    }
+    function returnpage(a){
+        //pagina anterior
+        history.go(a);
+    }
+    function submitform(){
+        alert("Sending Json");
+        var xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action, true);
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        var j = {
+            "tidentificador":"dirs1",
+            "ageografica":"dirs2",
+            "designacao":"designacao",
+            "emisor":"emisor",
+        };
+        xhr.send(JSON.stringify(j));
+        this.salvar();
+    }
+    function salvar() {
+       document.getElementById('conteudo').document.designMode = 'On';
+       var conteudo = '';
+
+       conteudo += "tidentificador: "+document.getElementById('dirs1').value+"<br>";
+       conteudo += "ageografica: "+document.getElementById('dirs2').value+"<br>";
+       conteudo += "designacao: "+document.getElementById('designacao').value+"<br>";
+       conteudo += "emisor: "+document.getElementById('emisor').value+"<br>";
+    
+       frames['conteudo'].document.body.innerHTML = conteudo;
+    
+       frames['conteudo'].document.execCommand('SaveAs',false,'arquivo.txt');
+}
+</script>
+</head>
+<BODY>
+    <center>
+    <IMG SRC="img/banerclinica.jpg">
+    </center>
+<BR>
+<h3><CENTER>Identificador | <a href="nomes.html">Nomes</a> | <a href="geograf.html">Dados Geograficos</a> | <a href="endereco.html">Enderecos</a> | <a href="eletro.html">Comunicacoes eletronicos</a> | <a href="vinculos.html">Vinculos</a></CENTER></h3>
+<br>
+<div id="login">
+<div id="area">
+
+<form id="formulario" action="nomes.html" method="POST" name="myForm">
+   <fieldset>
+<div class="login-card">
+
+ <div class="card-title"><h1>Identificador</h1></div>
+
+<div class="content">
+
+<label>Tipo do identificador</label>
+<input id="email" class="tipoiden" list="dirs1" name="dir1" id="dir1" />
+    <datalist id="dirs1">
+      <option value="Unico dentro da organizacao" />
+      <option value="Numero do prontuario" />
+      <option value="Radiologia" />
+      <option value="Patologia" />
+      <option value="Farmacia" />
+    </datalist>
+
+<label>Area geografica</label>
+
+<input id="email" class="areageo" list="dirs2" name="dir2" id="dir2" />
+        <datalist id="dirs2">
+          <option value="Local" />
+          <option value="Area regiao distrito" />
+          <option value="Estado provincia territorio" />
+          <option value="Nacional" />
+        </datalist>
+
+<label>Designacao</label>
+  <input id="email" class="designacao" type="text" name="designacao" />
+<!--campo de fecha (data)-->
+<div class="field">
+  <div class="control">
+    <label>Data</label>
+    <input class="input" type="date" name="data" value="mm/dd/aaaa" />
+  </div>
+</div>
+<!--fin de campo-->
+<label>Emissor</label>
+  <input id="email" class="emisor" type="text" name="emisor" />
+
+</div>
+<div id="area">
+<!-- botones -->
+<table align="center" border="0" width="100%">
+    <tr>
+        
+        <td colspan="3">
+            <div class="btn centered">
+              <button type="reset" class="btn btn_limpar">   Limpar  </button>
+            </div>
+        </td>
+        <td colspan="3">
+            <div class="btn centered">
+              <button type="submit" class="btn btn_enviar" onclick="submitform()">    Enviar    </button>
+            </div>
+        </td>
+        
+    </tr>
+</table>
+</fieldset>
+</div></div>
+<div id="area">
+<table width="100%">
+        <th><td><br></td><td></td></th>
+        <th><td><br></td><td></td></th>
+    <tr>
+        <td><div align="left" style="padding-left: 0pt;">
+              <button type="submit" class="btn btn_return" value="Retornar" type="button" onclick="returnpage(-1)">    Retornar</button>
+            </div>
+        </td>
+        <td>    <div align="right" style="padding-right: 0pt;">
+              <button type="submit" class="btn btn_next" value="Siguiente" type="button" onclick="javascript:nextpage()">    Siguiente    </button>
+            </div>
+    </tr>
+</table>
+</div>
+<!-- fim botones -->
+</div></div>
+</form>
+</BODY>
+</HTML>
+
